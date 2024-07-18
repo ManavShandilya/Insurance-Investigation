@@ -1,0 +1,147 @@
+body {
+ margin: 0;
+ font-family: 'Lato', sans-serif;
+ line-height: 1.6;
+}
+
+header {
+ background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+ color: #fff;
+ padding: 1rem 0;
+ text-align: center;
+ position: fixed; /* Fixed positioning */
+ width: 100%;
+ top: 0;
+ z-index: 1000; /* Ensure it stays on top */
+}
+
+nav ul {
+ list-style: none;
+ padding: 0;
+}
+
+nav ul li {
+ display: inline;
+ margin: 0 15px;
+}
+
+nav ul li a {
+ color: #fff;
+ text-decoration: none;
+}
+
+.landing {
+ height: 100vh;
+ background: url('assets/download.jpg') no-repeat center center/cover;
+ position: relative;
+ color: #fff;
+ text-align: center;
+}
+
+.overlay {
+ background: rgba(0, 0, 0, 0.5);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.landing h1 {
+ font-size: 3rem;
+ padding: 0 20px;
+}
+
+.about, .services, .contact {
+ padding: 2rem;
+}
+
+.about h2, .services h2, .contact h2 {
+ margin-bottom: 1rem;
+}
+
+.about-inner {
+ display: flex;
+ justify-content: left;
+ align-items: center;
+}
+
+.about-inner img {
+ height: 500px;
+ width: 500px;
+}
+
+.services-inner {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 50px;
+}
+
+.services-inner .first {
+ width: 85%;
+ border-right: solid 1px black;
+ margin-left: 20px;
+}
+
+.services-inner .second {
+ margin-left: 20px;
+}
+
+footer {
+ background: #333;
+ color: #fff;
+ text-align: center;
+ padding: 1rem 0;
+ bottom: 0;
+ width: 100%;
+}
+
+.email-link {
+ color: inherit; /* Inherit text color */
+ text-decoration: none; /* Remove underline */
+}
+
+.email-link:hover {
+ text-decoration: underline; /* Add underline on hover */
+ cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+ .about-inner {
+     display: block;
+ }
+
+ .about-inner img {
+     display: none;
+ }
+
+ .services-inner {
+     display: block;
+ }
+
+ .services-inner .first, .services-inner .second {
+     width: 100%;
+     margin: 0;
+     border-right: none;
+     margin-bottom: 20px;
+ }
+
+ .landing h1 {
+     font-size: 2.5rem;
+ }
+}
+
+@media (min-width: 769px) {
+ .landing h1 {
+     font-size: 4rem;
+ }
+}
+
+/* Smooth Scrolling */
+html {
+ scroll-behavior: smooth;
+}
